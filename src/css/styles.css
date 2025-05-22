@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto+Mono:wght@400;700&display=swap');
+
+body {
+  background: linear-gradient(135deg, #0a0f1a 0%, #1a2233 100%);
+  color: #e0e0e0;
+  font-family: 'Roboto Mono', monospace;
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem 1rem 1rem;
+  position: relative;
+}
+
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: #00ffe7;
+  letter-spacing: 0.1em;
+  text-shadow: 0 0 10px #00ffe7, 0 0 40px #00ffe7;
+  margin-bottom: 0.2em;
+}
+
+.ai {
+  color: #ff00cc;
+  text-shadow: 0 0 10px #ff00cc, 0 0 40px #ff00cc;
+}
+
+.pulse {
+  color: #ff003c;
+  animation: pulse 1.2s infinite alternate;
+  font-size: 1.2em;
+  vertical-align: middle;
+}
+
+@keyframes pulse {
+  0% { text-shadow: 0 0 10px #ff003c, 0 0 20px #ff003c; }
+  100% { text-shadow: 0 0 30px #ff003c, 0 0 60px #ff003c; }
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #b0f7ff;
+  margin-bottom: 1.5em;
+  letter-spacing: 0.05em;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  padding: 2rem 1rem;
+}
+
+.iphone-frame {
+  background: linear-gradient(145deg, #232a34 60%, #181c22 100%);
+  border: 8px solid #222;
+  border-radius: 40px;
+  box-shadow: 0 0 60px #00ffe7a0, 0 0 0 8px #111 inset;
+  width: 340px;
+  height: 700px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2em 0;
+}
+
+.iphone-notch {
+  width: 120px;
+  height: 18px;
+  background: #111;
+  border-radius: 0 0 20px 20px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  margin-top: -8px;
+}
+
+.iphone-inner {
+  flex: 1;
+  width: 92%;
+  margin: 38px auto 0 auto;
+  background: linear-gradient(135deg, #181c22 80%, #232a34 100%);
+  border-radius: 32px;
+  box-shadow: 0 0 30px #00ffe740 inset;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  padding: 2em 1em 1em 1em;
+  overflow-y: auto;
+}
+
+.iphone-home {
+  width: 48px;
+  height: 48px;
+  background: #222;
+  border-radius: 50%;
+  border: 3px solid #444;
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px #00ffe7a0;
+}
+
+.upload-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+.upload-label {
+  background: linear-gradient(90deg, #00ffe7 0%, #ff00cc 100%);
+  color: #222;
+  padding: 1em 2em;
+  border-radius: 2em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 1em;
+  box-shadow: 0 0 20px #00ffe7a0;
+  transition: background 0.3s;
+}
+
+.upload-label:hover {
+  background: linear-gradient(90deg, #ff00cc 0%, #00ffe7 100%);
+}
+
+.upload-label input[type="file"] {
+  display: none;
+}
+
+#analyzeBtn {
+  background: #ff00cc;
+  color: #fff;
+  border: none;
+  padding: 0.8em 2em;
+  border-radius: 2em;
+  font-size: 1.1em;
+  font-family: 'Orbitron', sans-serif;
+  cursor: pointer;
+  box-shadow: 0 0 20px #ff00cc80;
+  transition: background 0.3s;
+}
+
+#analyzeBtn:hover {
+  background: #00ffe7;
+  color: #222;
+  box-shadow: 0 0 30px #00ffe7a0;
+}
+
+.results-section {
+  margin-top: 2em;
+  background: rgba(10, 20, 30, 0.7);
+  border-radius: 1em;
+  padding: 1.5em;
+  box-shadow: 0 0 20px #ff00cc80;
+}
+
+.results-section h2 {
+  font-family: 'Orbitron', sans-serif;
+  color: #ff00cc;
+  margin-bottom: 1em;
+  text-shadow: 0 0 10px #ff00cc;
+}
+
+#results {
+  font-size: 1.1em;
+  color: #e0e0e0;
+  min-height: 2em;
+  word-break: break-word;
+}
+
+footer {
+  text-align: center;
+  padding: 2em 1em 1em 1em;
+  color: #b0f7ff;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+}
+
+.neon-glow {
+  position: fixed;
+  top: -30vw;
+  left: -30vw;
+  width: 60vw;
+  height: 60vw;
+  background: radial-gradient(circle, #00ffe7 0%, transparent 70%);
+  opacity: 0.15;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 700px) {
+  main {
+    padding: 1rem 0.5rem;
+  }
+  .iphone-frame {
+    width: 98vw;
+    height: 80vw;
+    min-width: 220px;
+    min-height: 400px;
+    max-width: 99vw;
+    max-height: 90vh;
+  }
+  .iphone-inner {
+    padding: 1em 0.5em 0.5em 0.5em;
+  }
+  .upload-label, #analyzeBtn {
+    width: 100%;
+    font-size: 1em;
+  }
+}
