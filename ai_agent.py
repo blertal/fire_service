@@ -8,7 +8,7 @@ from langchain_core.messages import HumanMessage
 from pyDatalog import pyDatalog
 
 # Load .env from a custom location
-load_dotenv(dotenv_path="$HOME/Downloads/.env")
+load_dotenv(dotenv_path=os.path.expandvars("$HOME/Downloads/.env"))
 
 # --- Image utilities ---
 
