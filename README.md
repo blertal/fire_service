@@ -32,6 +32,7 @@ pip install flask flask-cors pillow python-dotenv langchain-google-genai pydatal
 1. run in your terminal: 
 source ~/flask_env/bin/activate
 
+## Note the folder again ##
 2. run in your terminal (flask_env): 
 $HOME/Downloads/fire_service/run_fire_service.sh
 
