@@ -37,14 +37,15 @@ python -m http.server 8000
 - It updates the web page to show the AI result under "Analysis Results".
 
 Summary Table
-Step    	        What Runs?	            Where?	                What Happens?
-1. .sh script       Flask backend	        Terminal 1	            Starts backend on port 5000
-2. Static server	Python HTTP server      Terminal 2	            Serves frontend on port 8000
-3. Open web app	    Browser	                localhost:8000	        Loads HTML/JS
-4. Browse image	    Browser	                Local memory	        Image selected, not uploaded yet
-5. Analyze click	Browser JS → Flask	    HTTP POST to backend	Image sent to backend for analysis
-6. Backend process	Flask	                Server-side	            AI analyzes image, returns result
-7. Show result	    Browser JS	            Web page	            Displays result to user
+| Step            | What Runs?           | Where?           | What Happens?                                 |
+|-----------------|----------------------|------------------|-----------------------------------------------|
+| 1. .sh script   | Flask backend        | Terminal 1       | Starts backend on port 5000                   |
+| 2. Static server| Python HTTP server   | Terminal 2       | Serves frontend on port 8000                  |
+| 3. Open web app | Browser              | localhost:8000   | Loads HTML/JS                                 |
+| 4. Browse image | Browser              | Local memory     | Image selected, not uploaded yet              |
+| 5. Analyze click| Browser JS → Flask   | HTTP POST        | Image sent to backend for analysis            |
+| 6. Backend proc | Flask                | Server-side      | AI analyzes image, returns result             |
+| 7. Show result  | Browser JS           | Web page         | Displays result to user                       |
 
 Where does the image go?
 - When you select it: Browser memory only
