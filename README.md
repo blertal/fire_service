@@ -1,89 +1,116 @@
 # Fire Detection System
 
+> **Tip:** If you have issues, try using Firefox, clear your browser history, or use private browsing without ad blockers.
+
+---
 
 ## Setting up a Local Virtual Environment
 
 1. **Create a virtual environment (only needed once):**
-   ```
-   python -m venv ~/flask_env
+   ```sh
+   python3 -m venv ~/flask_env
    ```
 
 2. **Activate the virtual environment:**
-   ```
+   ```sh
    source ~/flask_env/bin/activate
    ```
 
 3. **Install the required packages:**
-   ```
+   ```sh
    pip install flask flask-cors pillow python-dotenv langchain-google-genai pydatalog
    ```
 
-# To run in local virtual environment
-source ~/flask_env/bin/activate
+---
 
-# Install these
-In your activated virtual environment, run:
+## Running the App
 
-```
-pip install flask flask-cors pillow python-dotenv langchain-google-genai pydatalog
-```
+1. **Start the Flask backend:**
+   ```sh
+   $HOME/Downloads/fire_service/run_fire_service.sh
+   ```
+   (This activates the virtual environment and runs the backend on port 5000.)
 
-## TO RUN THE APP -- use the folder where you installed virtual env. ##
-1. run in your terminal: 
-source ~/flask_env/bin/activate
+2. **In a new terminal, serve the frontend:**
+   ```sh
+   cd $HOME/Downloads/fire_service/src
+   python3 -m http.server 8000
+   ```
+   (This serves the frontend at [http://localhost:8000/index.html](http://localhost:8000/index.html).)
 
-## Note the folder again ##
-2. run in your terminal (flask_env): 
-$HOME/Downloads/fire_service/run_fire_service.sh
-
-3. run in another terminal
-source ~/flask_env/bin/activate
-
-and in the same terminal (flask_env): 
-python -m http.server 8000
+---
 
 ## Overview
-The Fire Detection System is a web application designed to detect and analyze fire hazards using image processing and machine learning techniques. This project serves as a demonstration of how technology can be leveraged to enhance safety and awareness in environments prone to fire risks.
+
+The Fire Detection System is a web application that detects and analyzes fire hazards using image processing and AI (Gemini). It demonstrates how technology can enhance safety and awareness in fire-prone environments.
+
+---
 
 ## Project Structure
+
 ```
-fire-detection-system
+fire_service
 ├── src
-│   ├── css
-│   │   └── styles.css        # Styles for the web application
-│   ├── js
-│   │   └── app.js           # JavaScript code for handling interactions
-│   ├── images                # Directory for storing images
-│   └── index.html            # Main HTML file for the application
-├── README.md                 # Documentation for the project
+│   ├── css/
+│   │   └── styles.css
+│   ├── js/
+│   │   └── app.js
+│   ├── images/
+│   └── index.html
+├── app.py
+├── ai_agent.py
+├── run_fire_service.sh
+├── README.md
+├── .gitignore
+└── ... (other files)
 ```
+
+---
 
 ## Features
-- User-friendly interface for uploading images.
-- Real-time analysis of images to detect fire hazards.
-- Visual feedback on the detection results.
-- Responsive design for accessibility on various devices.
+
+- User-friendly interface for uploading images
+- Real-time AI analysis of images to detect fire hazards
+- Visual feedback on detection results
+- Responsive design for accessibility on various devices
+
+---
 
 ## Setup Instructions
+
 1. **Clone the repository:**
-   ```
-   git clone <repository-url>
-   cd fire-detection-system
+   ```sh
+   git clone https://github.com/blertal/fire_service.git
+   cd fire_service
    ```
 
-2. **Open the project in your preferred web server or IDE.**
+2. **Set up your virtual environment and install dependencies** (see above).
 
-3. **Run the application:**
-   - Open `src/index.html` in a web browser to view the application.
+3. **Add your `.env` file** with your Gemini API key:
+   ```
+   GEMINI_API_KEY=your-api-key-here
+   ```
+   *(Do not commit this file!)*
+
+4. **Run the backend and frontend as described above.**
+
+5. **Open** [http://localhost:8000/index.html](http://localhost:8000/index.html) in your browser.
+
+---
 
 ## Technologies Used
-- HTML5
-- CSS3
-- JavaScript
-- Image Processing Libraries (if applicable)
+
+- Python (Flask, Flask-CORS, Pillow, python-dotenv, langchain-google-genai, pyDatalog)
+- HTML5, CSS3, JavaScript
+
+---
 
 ## Contributing
+
 Contributions are welcome! Please submit a pull request or open an issue for any enhancements or bug fixes.
 
+---
+
 ## License
+
 This project is licensed under the MIT License. See the LICENSE file for more details.
