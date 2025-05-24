@@ -1,0 +1,3 @@
+([('fire_detection_kivy',
+   '/Users/andik/Downloads/fire_service/dist/fire_detection_kivy',
+   'EXECUTABLE')],)

@@ -1,6 +1,9 @@
 # All the sample images
 content/
 
+# All the local applications
+dist/
+
 # Python virtual environment
 flask_env/
 venv/
